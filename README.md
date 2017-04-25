@@ -1,2 +1,2 @@
-# unpedia
-Enquire within upon everything
+# Unpedia
+Enquire within upon everything. 
