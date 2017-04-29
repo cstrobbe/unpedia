@@ -163,3 +163,19 @@ hr {
   color: #51739C;
 }
 
+dt, dd {
+  border-bottom: 1px solid  #51739C;
+  color: inherit;
+  line-height: 1.4em;
+  padding-left: 4px;
+}
+dt {
+  background-color: #98A8BF;
+  margin-top: 4px;
+  font-weight: bolder;
+}
+dd {
+  border-left: 1px solid #51739C;
+  margin-top: 2px;
+}
+
