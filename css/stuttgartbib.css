@@ -179,3 +179,23 @@ dd {
   margin-top: 2px;
 }
 
+li.shax-bio, dt.shax-bio { background-color: #EEE; color: inherit; }
+dt.shax-bio, dd.shax-bio { border-bottom: 1px solid #CCC; }
+dd.shax-bio { border-left: 1px solid #CCC; }
+
+li.shax-source, dt.shax-source { background-color: #FDDB58; color: inherit; }
+dt.shax-source, dd.shax-source { border-bottom: 1px solid #7C3100; }
+dd.shax-source { border-left: 1px solid #7C3100; }
+
+li.shax-work, dt.shax-work { background-color: #98A8BF; color: inherit; }
+dt.shax-work, dd.shax-work { border-bottom: 1px solid #51739C; }
+dd.shax-work { border-left: 1px solid #51739C; }
+
+li.date-history, dt.date-history { background-color: #CCC; color: inherit; }
+dt.date-history, dd.date-history { border-bottom: 1px solid #666; }
+dd.date-history { border-left: 1px solid #666; }
+
+li.date-culture, dt.date-culture { background-color: #EEC62A; color: inherit; }
+dt.date-culture, dd.date-culture { border-bottom: 1px solid #7C6300; }
+dd.date-culture { border-left: 1px solid #7C6300; }
+
