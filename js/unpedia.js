@@ -47,7 +47,7 @@ var unpedia = {
     addChronologyTweaker: function() {
         "use scrict";
         var chronoTweaker, chronoTweakForm, chronoTweakFieldset, chronoTweakFieldsetLegend;
-        var chronoTweakFormButton, shaxBio, shaxWork, shaxSource, dateCulture, dateHistory;
+        var shaxBio, shaxWork, shaxSource, dateCulture, dateHistory;
 
         chronoTweaker = document.getElementById("tweak-chrono-container");
         if (chronoTweaker !== null) {
@@ -85,7 +85,7 @@ var unpedia = {
      */
     toggleChronologyVisibility: function(target, type) {
         "use scrict";
-        var targetElement, status, elems, i;
+        var status, elems, i;
         if (DEBUG) console.log("Event: target.id=" + target.getAttribute("id") + "; class=" + target.getAttribute("class") + "; type=" + type);
 
         status = target.getAttribute("checked");
