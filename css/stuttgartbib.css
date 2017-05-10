@@ -204,3 +204,6 @@ form p label { padding-right: 4px; padding-left: 4px;}
 
 .hidden, *[hidden="hidden"] { display: none; }
 
+li blockquote, dd blockquote { margin: 10px 20px; }
+li blockquote p, dd blockquote p { margin-top: 0; margin-bottom: 0; }
+
