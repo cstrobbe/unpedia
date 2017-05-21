@@ -104,7 +104,7 @@ rp, rt {
   display: none;
 }
 
-.booktitle, .journal, .magazine, .newspaper, .website {
+i.booktitle, i.journal, i.proceedings, i.conference, i.editedvolume, i.phdthesis, i.magazine, i.newspaper, i.website, i.blog, i.play {
   font-style: italic;
 }
 
