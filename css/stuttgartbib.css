@@ -209,8 +209,19 @@ li blockquote p, dd blockquote p { margin-top: 0; margin-bottom: 0; }
 
 li.book i.booktitle { font-weight: bold; }
 
-#error404 #sitemap {
+/*
+#error404 header, #error404 #sitemap, #error404 main {
   float: none;
   width: auto;
   clear: left;
+  background-color: transparent;
 }
+#error404 #sitemap li {
+  background-color: transparent;
+}
+#error404 #sitemap li a {
+  display: inline;
+  background-color: transparent;
+}
+*/
+
