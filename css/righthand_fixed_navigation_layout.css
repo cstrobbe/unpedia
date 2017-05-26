@@ -119,3 +119,8 @@ i.booktitle, i.journal, i.proceedings, i.conference, i.editedvolume, i.phdthesis
   margin-left: 0;
 }
 
+a.isbn[href="404.html"] { /*display: none;*/
+  cursor: text; text-decoration: none;
+  color: black; background-color: inherit;
+}
+

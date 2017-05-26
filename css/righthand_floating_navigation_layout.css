@@ -141,3 +141,8 @@ section {
   margin-top: 60px;
 }
 
+a.isbn[href="404.html"] { /*display: none;*/
+  cursor: text; text-decoration: none;
+  color: black; background-color: inherit;
+}
+
