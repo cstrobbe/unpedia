@@ -141,7 +141,7 @@ section {
   margin-top: 60px;
 }
 
-a.isbn[temp-href="404.html"], a.isbn[temp-href="404.html"]:hover, a.isbn[temp-href="404.html"]:focus { /*display: none;*/
+a.isbn[temp-href="404.html"], a.isbn[temp-href="404.html"]:hover, a.isbn[temp-href="404.html"]:focus, a.sbn[temp-href="404.html"], a.sbn[temp-href="404.html"]:hover, a.sbn[temp-href="404.html"]:focus { /*display: none;*/
   cursor: text; text-decoration: none;
   color: black; background-color: inherit;
 }
