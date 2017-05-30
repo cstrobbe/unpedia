@@ -209,6 +209,13 @@ li blockquote p, dd blockquote p { margin-top: 0; margin-bottom: 0; }
 
 li.book i.booktitle { font-weight: bold; }
 
+section.intermezzo {
+  margin-left: 20px;
+  padding: 10px; 
+  border: 2px solid #EEC62A;
+  border-radius: 10px;
+}
+
 /*
 #error404 header, #error404 #sitemap, #error404 main {
   float: none;
