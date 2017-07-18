@@ -7,6 +7,26 @@ var DEBUG = true;
  * @namespace The main application object.
  */
 var unpedia = {
+    shaxChronoGroups : { //jsnlabels
+        "legend"        : "Filter dates",
+        "dategroups"    : {
+            "shaxBio"       : ["Biography and Stratford", "checked", "shax-bio"],
+            "shaxWork"      : ["Shakespeare's work and the theatres", "checked", "shax-work"],
+            "shaxSource"    : ["Shakespeare's sources", "checked", "shax-source"],
+            "dateCulture"   : ["Other literary and cultural events", "checked", "date-culture"],
+            "dateHistory"   : ["Historical and political events", "checked", "date-history"]
+        }
+    },
+    engLitRenaissanceGroups : { //jsnlabels
+        "legend"        : "Filter authors / works",
+        "dategroups"    : {
+            "preShakespeare"    : ["Pre-Shakespearean works", "checked", "pre-shakespeare"],
+            "nonFiction"        : ["Non-fiction work and the theatres", "checked", "non-fiction"],
+            "marlowe"           : ["Shakespeare's sources", "checked", "marlowe-work"],
+            "shakespeare"       : ["Other literary and cultural events", "checked", "shax-work"]
+        }
+    },
+
     init: function() {
         "use strict";
         // Check support for W3C DOM. (C. Heilmann: Beginning JavaScript Development ..., p. 66-68.)
@@ -42,9 +62,10 @@ var unpedia = {
 
     /**
      * Add a form that lets the user tweak the chronology.
+     * @param {Object} jsnlabels - JSON object representing the labels for the form.
      * @author Christophe Strobbe
      */
-    addChronologyTweaker: function() {
+    addChronologyTweaker: function(jsnlabels) {
         "use scrict";
         var chronoTweaker, chronoTweakForm, chronoTweakFieldset, chronoTweakFieldsetLegend;
         var shaxBio, shaxWork, shaxSource, dateCulture, dateHistory;
@@ -54,6 +75,7 @@ var unpedia = {
             chronoTweakForm = document.createElement("form");
             chronoTweakFieldset = document.createElement("fieldset");
             chronoTweakFieldsetLegend = document.createElement("legend");
+            //@@todo get labels etc from the JSON object passed in to the function.
             chronoTweakFieldsetLegend.appendChild(document.createTextNode("Filter dates"));
             chronoTweakFieldset.appendChild(chronoTweakFieldsetLegend);
             shaxBio = unpedia.createCheckbox("shaxBio", "Biography and Stratford", "checked", "shax-bio");
