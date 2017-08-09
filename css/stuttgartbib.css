@@ -216,6 +216,8 @@ section.intermezzo {
   border-radius: 10px;
 }
 
+q:lang(enm) { quotes: '\201C' '\201D' '\2018' '\2019'; } /*resp. &ldquo;, &rdquo;, &lsquo;, &rsquo; - see http://www.evotech.net/blog/2007/04/named-html-entities-in-numeric-order/ */
+
 /*
 #error404 header, #error404 #sitemap, #error404 main {
   float: none;
