@@ -118,6 +118,48 @@ a:link, a:visited {
   color: #052452;
 }
 
+#introquote {
+  font-size: 1.1em;
+  font-style: italic;
+  width: 700px;
+  margin: 0.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1.45;
+  position: relative;
+  background-color: transparent;
+  color: #222222;
+  border: 0;
+}
+#introquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7a7a7a;
+}
+
+blockquote {
+  background-color: #98A8BF;/*@@find a lighter colour*/
+  color: black;
+  padding: 4px 12px;
+  border: 2px solid #5583B5;
+  border-radius: 10px;
+}
+blockquote cite {
+  color: #555;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+blockquote cite:before {
+  content: "\2014 \2009";
+}
+
+li blockquote { margin: 4px 0;}
+li blockquote p { margin: 0; padding: 0;}
+
 
 h2 {
   color: #2e484c;
