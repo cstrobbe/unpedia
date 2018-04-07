@@ -290,6 +290,12 @@ q:lang(enm) { quotes: '\201C' '\201D' '\2018' '\2019'; } /*resp. &ldquo;, &rdquo
   font-family: "KaiTi", "楷体", STKaiti, "华文楷体", STFangSong, "华文仿宋", Simsun, 'MS Song', Song, STSong;
   font-style: normal;
 }
-*[lang=zh-CN], rb[lang=zh-CN], span[lang=zh-CN], .solutions[lang=zh-CN], .solutions span[lang=zh-CN], nav li a[lang=zh-CN] {
+*[lang=zh-CN], rb[lang=zh-CN], span[lang=zh-CN], .solutions[lang=zh-CN], .solutions span[lang=zh-CN], nav li a[lang=zh-CN],
+*[lang=zh-Hant], rb[lang=zh-Hant], span[lang=zh-Hant], i[lang=zh-Hant] {
   font-size: 1.3em;
+}
+/* See "Best font for chinese characters in word": https://focuqawevoguruxaciga.ga/8574931/8a2482c8bd-best-font-for-chinese-characters-in-word-16cb656 */
+*[lang=zh-Hant], rb[lang=zh-Hant], span[lang=zh-Hant], i[lang=zh-Hant] {
+  font-family: "KaiTi", "DFKai-SB", "STKaiti-SC", "STKaiti-TC";
+  font-style: normal;
 }
