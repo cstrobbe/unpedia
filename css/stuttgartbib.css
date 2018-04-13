@@ -284,6 +284,7 @@ q:lang(enm) { quotes: '\201C' '\201D' '\2018' '\2019'; } /*resp. &ldquo;, &rdquo
 }
 */
 
+ul.manualnumbers { list-style-type: none; }
 
 /* Other Chinese fonts: "FangSong", "仿宋"; see http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/ & http://webdesign.tutsplus.com/articles/the-complete-beginners-guide-to-chinese-fonts--cms-23444 */
 *[lang=zh-CN], rb[lang=zh-CN], span[lang=zh-CN], i[lang=zh-CN] {
