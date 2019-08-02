@@ -6,6 +6,6 @@ to classify bookmarks and other information on a website.
 
 ## Licence and Copyright
 
-Copyright: Christophe Strobbe, 2017 – 2018.
+Copyright: Christophe Strobbe, 2017 – 2019.
 
 Licences: typically a version of Creative Commons; check each individual file.
