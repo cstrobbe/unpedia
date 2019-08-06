@@ -57,6 +57,21 @@
       <a href="https://www.youtube.com/watch?v=V8EUdia_kOE">My 5 Favorite Linux Shell Tricks for SPEEEEEED (and efficiency)</a>
       (YouTube, 11 minutes, 03.06.2018). This video assumes you already know the shell basics.<!--tutorialLinux channel-->
     </li>
+    <li>
+      <a href="https://www.youtube.com/watch?v=Zuwa8zlfXSY">8 super heroic Linux commands that you probably aren't using</a>
+      (Engineer Man on YouTube, 9 minutes, 16.12.2018).
+      <!--
+        1. sudo !! : repeat the previous command but as sudo'er
+        2. ctrl + x + e: open an editor from the terminal
+        3. Create a RAM-disk: mkdir - -p /mnt/ram; mount -t tmpfs /mnt/ram -a size=8192M
+        4. Use a command without adding it to the history: put a space in front of it. [Works on Ubuntu 16.04, not on Manjaro]
+        5. fix a long command that you messed up: use fc to open the previous command in an editor. [Under Manjaro, fc does not show up in the history]
+        6. creating tunnels with SSH: ssh -L 3337:127.0.0.1:6379 root@example.com -N
+        7. quickly create folders: mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}; mkdir -p folder/{1..10}/{1..10}
+        8. cat file.txt | tee -a log.txt | cat > /dev/null
+        9. exit terminal but leave all processes running: disown -a && exit [some commenters use screen instead of disown]
+      -->
+    </li>
     <li>Ward, Brian:
       <i class="booktitle">How Linux Works: What Every Superuser Should Know</i>. Second edition. No Starch Press, 2014. (392 pages) 
       <a href="https://nostarch.com/howlinuxworks2"><abbr>ISBN</abbr> 978-1-59327-567-9</a>.
