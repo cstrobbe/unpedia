@@ -1,9 +1,11 @@
 *.bak
 *.draft
-*.marks
-*.html~
-*.html~*
+*.bak.html
 *.css~
 *.css~*
+*.html~
+*.html~*
 *.js~*
+*.json~*
+*.marks
 *.md~*
