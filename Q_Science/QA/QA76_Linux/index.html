@@ -156,7 +156,7 @@
     <li>Soyinka, Wale:
       <i class="booktitle">Linux Administration: A Beginner’s Guide</i>. Seventh edition. McGrawHill, 2015.
       <a href="https://www.mheducation.ca/linux-administration-a-beginner-s-guide-seventh-edition-9780071845366-can"><abbr>ISBN</abbr> 9780071845366</a>.
-      (The eighth edition is scheduled for publication in March 2020.)<!-- 8th edition: https://www.mheducation.co.uk/linux-administration-a-beginner-s-guide-eighth-edition-9781260441703-emea -->
+      (The eighth edition is scheduled for publication in March 2020.)<!--@@update 2020: 8th edition: https://www.mheducation.co.uk/linux-administration-a-beginner-s-guide-eighth-edition-9781260441703-emea -->
       <!--Strictly speaking assumes the reader is a Windows power user.-->
     </li>
     <li>Sobell, Mark G.; Helmke, Matthew:
@@ -465,13 +465,36 @@
       <a href="http://www.linuxfromscratch.org/">Linux from Scratch</a>:
       <q>a project that provides you with step-by-step instructions for building your own custom Linux system, entirely from source code</q>.
     </li>
-    <li>Wallen, Jack:
-      <a href="https://www.linux.com/learn/intro-to-linux/2018/4/how-compile-linux-kernel-0">How to Compile a Linux Kernel</a>,
-      <i class="website">Linux.com</i>, 27.04.2018
-    </li>
     <li>
       <a href="https://lwn.net/">LWN.net</a>:
       <q>a reader-supported news site dedicated to producing the best coverage from within the Linux and free software development communities</q>.
+    </li>
+    <li>Ashley, W. David; Krause, Andrew :
+      <i class="booktitle">Foundations of Py<abbr>GTK</abbr> Development: <abbr>GUI</abbr> Creation with Python</i>. Apress, 2019. (563 pages)
+      <a href="https://www.apress.com/gp/book/9781484241783"><abbr>ISBN</abbr> 978-1-4842-4178-3</a>.
+      <br />This book does not assume previous experience with <abbr>GTK</abbr> development but readers not to know Python.
+      <br />See also the
+      <a href="http://www.gtkbook.com/pygtkbook/">website for <i class="booktitle">Foundations of Py<abbr>GTK</abbr> Development</i></a>.
+    </li>
+    <li>Krause, Andrew :
+      <i class="booktitle">Foundations of <abbr>GTK</abbr>+ Development</i>. Apress, 2007.
+      <a href="https://www.apress.com/gp/book/9781430203865"><abbr>ISBN</abbr> 978-1-4302-0386-5</a> (only available as an e-book).
+      <br />See also the
+      <a href="http://www.gtkbook.com/gtkbook/">website for <i class="booktitle">Foundations of <abbr>GTK</abbr>+ Development</i></a>.
+    </li>
+    <!--
+    <li>:
+      <i class="booktitle"></i>.
+      <a href=""><abbr>ISBN</abbr> </a>.
+    </li>
+    -->
+  </ul>
+
+  <h2>The Linux Kernel</h2>
+  <ul>
+    <li>Wallen, Jack:
+      <a href="https://www.linux.com/learn/intro-to-linux/2018/4/how-compile-linux-kernel-0">How to Compile a Linux Kernel</a>,
+      <i class="website">Linux.com</i>, 27.04.2018
     </li>
     <li>
       <a href="https://kernelnewbies.org/">Kernel Newbies</a>:
@@ -495,25 +518,39 @@
       <i class="booktitle">Linux Kernel Development</i>. Third edition. Addison-Wesley Professional, 2010. (480 pages)
       <a href="https://www.pearson.com/us/higher-education/program/Love-Linux-Kernel-Development-3rd-Edition/PGM202532.html"><abbr>ISBN</abbr> 9780672329463</a>.
     </li>
-    <li>Ashley, W. David; Krause, Andrew :
-      <i class="booktitle">Foundations of Py<abbr>GTK</abbr> Development: <abbr>GUI</abbr> Creation with Python</i>. Apress, 2019. (563 pages)
-      <a href="https://www.apress.com/gp/book/9781484241783"><abbr>ISBN</abbr> 978-1-4842-4178-3</a>.
-      <br />This book does not assume previous experience with <abbr>GTK</abbr> development but readers not to know Python.
-      <br />See also the
-      <a href="http://www.gtkbook.com/pygtkbook/">website for <i class="booktitle">Foundations of Py<abbr>GTK</abbr> Development</i></a>.
+    <li>
+      <a href="https://www.youtube.com/watch?v=sDrRvrh16ws">Let's Talk To Linux Kernel Developer Greg Kroah-Hartman | Open Source Summit, 2019</a>
+      (<abbr>TFiR</abbr> - Open Source &amp; Emerging Technologies on YouTube, 32 minutes, 03.09.2019).
+      Greg Kroah-Hartman says that <!--4:00-->security vulnerabilities such as Spectre and Meltdown were the consequence of hardware developers (Intel) taking shortcuts in order to achieve speed improvements.
+      <!--1:58-->He admits that the Open<abbr>BSD</abbr> were right when they said that hyperthreading should be disabled when you can't trust the users.
+      <!--3:05-->Researchers are now finding new vulnerabilities by reading Intel's patents
+      <!--4:12-->The ultimate solution to the vulnerabilities is fixing the hardware;
+      Intel was affected by these vulnerabilities, but <abbr>AMD</abbr>, Power<abbr>PC</abbr> and <abbr>ARM</abbr> were not, so it is possible to design hardware differently.
+      In the mean time, some security issues can be worked around in the <abbr>BIOS</abbr>, but since millions of affected devices are alrready in use,
+      <!--5:10-->it is also necessary to fix issues in the opereating system.
+      <!--5:15-->Many of the operating system fixes involving flushing buffers, which affects performance.
+      <!--6:10-->In addition to these reactive security fixes, the kernel developers have also been adding proactive security features for several years.
+      Android vendors also need to take the security fixes added by the Linux kernel developers.
+      <!--9:55-->Greg Kroah-Hartman has also audited the kernels of sume Android phone vendors.
+      He also talks about measures to make sure that kernal development can continue if someone like himself or Linus Torvalds were to be hit by a bus one day.
+      <!--14:00-->He talks about the Linux distros mailing list, a private mailing list which helps (the) various Linux distributions with co-ordination related to vulnerability releases.
+      <!--See also "2001: Linux is cancer, says Microsoft. 2019: Hey friends, ah, can we join the official linux-distros mailing list, plz?", 27.06.2019: https://www.theregister.co.uk/2019/06/27/microsoft_linux_distro_list/ -->
+      You need to do work in order to join this mailing list; Microsoft has a Linux distribution and much of its Azure infrastructure relies on Linux.
+      <!--17:15-->Companies contribute to Linux in a very selfish manner, but that is good because everybody has the same problems.
+      It costs more for a company to maintain their own fork of Linux than to contribute their improvements upstream.
+      <!--17:55-->Even Amazon contributes to the kernel now.
+      <!--18:30-->Linux on the desktop matters to Greg Kroah-Hartman as a developer; he sees it as a tool.
+      <!--19:30-->He talks about the different philosphy of Richard Stallman; he says <abbr>GPL</abbr> 2 was a great contribution to open source.
+      <!--22:34-->He says that <abbr>GPL</abbr> 3 introduced restrictions on how software can be used and most of the kernel developer community did not like these restrictions.
+      These restrictions may be appropriate for other software but they were not compatible with the direction the kernel developers had in mind.
+      <!--23:20-->He talks about his move to the Netherlands (after living in Paris for some time); some other kernel developers also live in The Hague.
+      <!--26:14-->He mentions that he uses Arch, but his build system runs on Fedora.
+      <!--27:20-->He moved from Gentoo to Arch because of something he needed that was not available on Gentoo. He also likes the rolling-release system and Arch works really well.
+      He says the <a href="https://wiki.archlinux.org/index.php/Systemd">systemd documentation on the Arch wiki</a> is an amazing piece of documentation.
+      <!--29:07-->Another advantage from a developer point of view is that Arch stays as close to upstream as possible.
+      <!--29:33-->Fedora is also good but is six months behind on some things.
+      <!--29:47-->He adds that possibly 80% of the world's Linux servers use either Debian or the kernel.org kernel, without Red Hat or OpenSUSE having lost market share recently. 
     </li>
-    <li>Krause, Andrew :
-      <i class="booktitle">Foundations of <abbr>GTK</abbr>+ Development</i>. Apress, 2007.
-      <a href="https://www.apress.com/gp/book/9781430203865"><abbr>ISBN</abbr> 978-1-4302-0386-5</a> (only available as an e-book).
-      <br />See also the
-      <a href="http://www.gtkbook.com/gtkbook/">website for <i class="booktitle">Foundations of <abbr>GTK</abbr>+ Development</i></a>.
-    </li>
-    <!--
-    <li>:
-      <i class="booktitle"></i>. 
-      <a href=""><abbr>ISBN</abbr> </a>.
-    </li>
-    -->
   </ul>
 
   <h2>Linux Certification</h2>
