@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Maaßen: LPIC-1 (2018)</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../css/stuttgartbib.css" title="default" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../../../css/unpedia.css" title="Unpedia" />
+  <!-- 
+  <link rel="alternate stylesheet" type="text/css" media="screen" href="../../../css/s_124085_triad.css" title="Three-colour scheme" />
+  <link rel="alternate stylesheet" type="text/css" media="screen" href="../../../css/systemcolours.css" title="System colours" />
+  <link rel="alternate stylesheet" type="text/css" media="screen" href="../../../css/default.css" title="No colours" />
+  -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="googlebot" content="noindex, nofollow" />
+  <meta name="author" content="Christophe Strobbe" />
+</head>
+
+<body id="home">
+  <header>
+    <h1><span class="h1txt"><span lang="de">Harald Maaßen</span>: <abbr title="Linux Professional Institute Certification">LPIC</abbr>-1 (2018)</h1>
+    <p class="skiplink"><a class="skiplink" href="#main">Skip to main content</a></p>
+  </header>
+
+  <main id="main">
+  <section>
+    <h2>What is this page about?</h2>
+    <p>This page contains notes and comments related to the book
+      <i class="booktitle" lang="de"><abbr>LPIC</abbr>-1. Sicher zur erfolgreichen Linux-Zertifizierung</i>
+      by <span lang="de">Harald Maaßen</span> (<span lang="de">Rheinwerk</span>, 2018).
+      This was probably the first <abbr>LPIC</abbr>-1 preparation guide that was updated to version 5
+      of the <abbr>LPIC</abbr>-1 exam objectives.
+      The book's author has been a member of the Linux Professional Institute (<abbr>LPI</abbr>)
+      since 2014. See also his blog post
+      <a href="https://www.lpi.org/blog/2019/01/15/recent-technical-innovation-requires-new-exams-lpic-1-version-50">Recent Technical Innovation Requires New Exams: <abbr>LPIC</abbr>-1 version 5.0</a>
+      (15 January 2019).
+    </p>
+    <p>Even though <span lang="de">Harald Maaßen</span> is a member of <abb>LPI</abb>,
+      some of the information in his book is incomplete or not completely accurate.
+      This page lists notes and comments on this type of issues.
+      <br />For references, see the objectives for
+      <a href="https://www.lpi.org/our-certifications/exam-101-objectives"><abbr>LPIC</abbr>-1 Exam 101 Objectives</a>
+      and
+      <a href="https://www.lpi.org/our-certifications/exam-102-objectives"><abbr>LPIC</abbr>-1 Exam 102 Objectives</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Topic 101: System Architecture</h2>
+    <h3>101.1: Determine and configure hardware settings</h3>
+    <p>Page 29: <code>/proc</code>: see also
+      <a href="https://www.tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html">/proc</a>
+      (<i class="website"><abbr title="The Linux Documentation Project">TLDP</abbr></i>, no date),
+      <a href="https://www.oreilly.com/library/view/linux-device-drivers/0596005903/ch12.html"><abbr>PCI</abbr> Drivers</a>
+      <!-- http://www.makelinux.net/ldd3/chp-12-sect-1.shtml -->
+      (<i class="booktitle">Linux Device Drivers</i>, third edition, by Greg Kroah-Hartman, Alessandro Rubini and Jonathan Corbet; O'Reilly, 2005),
+      <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Reference_Guide/s2-proc-interrupts.html">/proc/interrupts</a>,
+      <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Reference_Guide/s2-proc-pci.html">/proc/pci</a>,
+      <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/s2-proc-dir-scsi">/proc/scsi/</a>,
+      <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Reference_Guide/s2-proc-cpuinfo.html">/proc/cpuinfo</a>
+      and
+      <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Reference_Guide/s2-proc-iomem.html">/proc/iomem</a>
+      in the Red Hat Enterprise Linux documentation.
+    </p>
+    <p>Note that the book does not explain what <abbr>I/O</abbr> ports, interrupts and <abbr>DMA</abbr> are;
+      nor does it list important <abbr>IRQ</abbr>s and which types of hardware use them.
+      Below is a list of <abbr>IRQ</abbr>s based on the YouTube video
+      <a href="https://www.youtube.com/watch?v=bSBEm0ZyCC0" lang="de"><abbr>LPI</abbr>101 101 1 Teil2 Deutsch</a> (January 2017),
+      the article
+      <a href="http://tldp.org/LDP/LG/issue38/blanchard.html">Introduction to IRQs, DMAs and Base Addresses</a>
+      by Eugene Blanchard (1999) and the wiki page
+      <a href="https://www.rigacci.org/wiki/doku.php/doc/appunti/linux/sa/irq_acpi_apic"><abbr>IRQ</abbr>, <abbr>ACPI</abbr> and <abbr>APIC</abbr> and the Linux kernel</a>
+      by Niccolo Rigacci.
+    </p>
+    <table>
+      <thead>
+        <tr><th><abbr>IRQ</abbr></th><th>Function</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><abbr>IRQ</abbr> 0</th>
+          <td>System Timer</td>
+        </tr>
+        <tr>
+          <th><abbr>IRQ</abbr> 1</th>
+          <td>Keyboard Controller</td>
+        </tr>
+        <tr>
+          <th><abbr>IRQ</abbr> 3</th>
+          <td>Com2 (default) / Com4</td>
+        </tr>
+        <tr>
+          <th><abbr>IRQ</abbr> 4</th>
+          <td>Com1 (default) / Com3</td>
+        </tr>
+        <tr>
+          <th><abbr>IRQ</abbr> 5</th>
+          <td>Sound card or LPT2</td>
+        </tr>
+        <tr>
+          <th><abbr>IRQ</abbr> 7</th>
+          <td>LPT1 (Parallel port) or sound card</td>
+        </tr>
+        <tr>
+          <th><abbr>IRQ</abbr> 14</th>
+          <td>Primary <abbr>IDE</abbr> controller</td>
+        </tr>
+        <tr>
+          <th><abbr>IRQ</abbr> 15</th>
+          <td>Secondary <abbr>IDE</abbr> controller</td>
+        </tr>
+        <!--
+        <tr>
+          <th></th>
+          <td></td>
+        </tr>
+        -->
+      </tbody>
+    </table>
+    <p>Page 30: <code>sysfs</code> and <code>/sys</code>: see also
+      <a href="https://www.thegeekdiary.com/understanding-the-sysfs-file-system-in-linux/">Understanding The sysfs File System (/sys) in Linux</a>
+      (<i class="website">The Geek Diary</i>, no date), which explains the purpose of the contents of <code>/sys</code>:
+    </p>
+    <ul>
+      <li><code>/sys/block</code>: <q>This directory contains entries for each block device in the system</q>;</li>
+      <li><code>/sys/bus</code>: <q>This directory contains subdirectories for each physical bus type supported in the kernel</q>;</li>
+      <li><code>/sys/class</code>: <q>This directory contains every device class registered with the kernel</q>;</li>
+      <li><code>/sys/devices</code>: <q>This directory contains the global device hierarchy of all devices on the system</q>;</li>
+      <li><code>/sys/firmware</code>: <q>This directory contains subdirectories with firmware objects and attributes</q>;</li>
+      <li><code>/sys/module</code>: <q>This directory contains subdirectories for each module that is loaded into the kernel</q>;</li>
+      <li><code>/sys/power</code>: <q>The system power state can be controlled from this directory.</q></li>
+    </ul>
+    <p>Page 31: see also
+      <a href="https://wiki.debian.org/udev">udev - Linux dynamic device management</a>
+      in the Debian wiki and
+      <a href="https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux">Tutorial on how to write basic udev rules in Linux</a>
+      by Egidio Docile (02.12.2017).
+    </p>
+
+    <h3>101.2: Boot the system</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>101.3: Change runlevels / boot targets and shutdown or reboot system</h3>
+    <p>Page 53: the book recommends the following command for setting the default target:
+      <kbd>ln -s /usr/lib/systemd/system/multi-user.target /etc/systemd/system/default.target</kbd>
+      instead of the more appropriate
+      <strong><kbd>systemctl set-default multi-user.target</kbd></strong>.
+      (See for example
+      <a href="https://unix.stackexchange.com/questions/164005/non-graphical-boot-with-systemd">Non-graphical boot with systemd</a>
+      on Unix &amp; Linux Stack Exchange or
+      <a href="https://docs.fedoraproject.org/en-US/Fedora//html/Installation_Guide/sect-trouble-after-graphical-login.html">Booting into a Graphical Environment</a>
+      in the Fedora documentation.)
+    </p>
+  </section>
+
+  <section>
+    <h2>Topic 102: Linux Installation and Package Management</h2>
+    <h3>102.1: Design hard disk layout</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>102.2: Install a boot manager</h3>
+    <p>Page 61: the book does not mention that <abbr>GRUB</abbr> assumes a
+      QWERTY keyboard layout for input
+      (as pointed out in the
+      <a href="https://wiki.archlinux.org/index.php/GRUB_Legacy">Arch Linux wiki</a>-.
+    </p>
+
+    <h3>102.3: Manage shared libraries</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>102.4: Use Debian package management</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>102.5: Use <abbr>RPM</abbr> and YUM package management</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>102.6: Linux as a virtualization guest</h3>
+    <p>(No comments yet.)</p>
+
+  </section>
+
+  <section>
+    <h2>Topic 103: <abbr title="GNU's Not Unix">GNU</abbr> and Unix Commands</h2>
+    <h3>103.1: Work on the command line</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>103.2: Process text streams using filters</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>103.3: Perform basic file management</h3>
+    <p class="erratum">Page 103: <kbd>gzip</kbd>:
+      in order to keep the file that is being compressed, you need the option
+      <kbd>-k</kbd> or <kbd>--keep</kbd> (not <kbd>-c</kbd>).
+      In addition, you don't need to redirect the output using <kbd>&gt;</kbd>,
+      since there is no point in outputting the compressed version of a file to standard output.
+      It is sufficient to run, for example,
+      <kbd>gzip log.txt</kbd> or (if you want to keep the original file)
+      <kbd>gzip -k log.txt</kbd>.
+    </p>
+    <p>Page 103: <kbd>gzip</kbd>:
+      the book points out that you can pass a list of file or a glob pattern to compress
+      multiple files in a single step. One should be aware that this creates
+      a <code>gz</code> file for each file that matches these parameters.
+    </p>
+
+    <h3>103.4: Use streams, pipes and redirects</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>103.5: Create, monitor and kill processes</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>103.6: Modify process execution priorities</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>103.7: Search text files using regular expressions</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>103.8: Basic file editing</h3>
+    <p>(No comments yet.)</p>
+
+  </section>
+
+  <section>
+    <h2>Topic 104: Devices, Linux Filesystems, Filesystem Hierarchy Standard</h2>
+    <h3>104.1: Create partitions and filesystems</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>104.2: Maintain the integrity of filesystems</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>104.3: Control mounting and unmounting of filesystems</h3>
+    <p>(No comments yet.)</p>
+
+    <!--104.4 was removed.-->
+    <h3>104.5: Manage file permissions and ownership</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>104.6: Create and change hard and symbolic links</h3>
+    <p>(No comments yet.)</p>
+
+    <h3>104.7: Find system files and place files in the correct location</h3>
+    <p>(No comments yet.)</p>
+
+    <!--
+    <h3></h3>
+    <p>(No comments yet.)</p>
+    -->
+
+  </section>
+
+  <!--
+  <section>
+    <h2>Topic 105: Shells and Shell Scripting</h2>
+    <p></p>
+  </section>
+
+  <section>
+    <h2>Topic 106: User Interfaces and Desktops</h2>
+    <p></p>
+  </section>
+
+  <section>
+    <h2>Topic 107: Administrative Tasks</h2>
+    <p></p>
+  </section>
+
+  <section>
+    <h2>Topic 108: Essential System Services</h2>
+    <p></p>
+  </section>
+
+  <section>
+    <h2>Topic 109: Networking Fundamentals</h2>
+    <p></p>
+  </section>
+
+  <section>
+    <h2>Topic 110: Security</h2>
+    <p></p>
+  </section>
+  -->
+
+  </main>
+
+  <footer>
+    <p id="licence">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../../img/cc_by-nc-nd-4.0_88x31.png" /></a><br />
+    <strong>Unpedia</strong> by <a href="https://github.com/cstrobbe">Christophe Strobbe</a> is licensed under a 
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+    </p>
+  </footer>
+</body>
+</html>
