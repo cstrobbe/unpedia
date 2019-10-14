@@ -122,7 +122,7 @@ rp, rt {
   display: none;
 }
 
-i.booktitle, i.journal, i.proceedings, i.conference, i.editedvolume, i.phdthesis, i.magazine, i.newspaper, i.website, i.blog, i.play {
+i.booktitle, i.journal, i.proceedings, i.conference, i.editedvolume, i.phdthesis, i.magazine, i.newspaper, i.website, i.blog, i.ytchannel, i.play {
   font-style: italic;
 }
 
