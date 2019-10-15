@@ -22,6 +22,9 @@ a:hover, a:focus {
   color: #2e484c;
   text-decoration: underline;
 }
+a.skiplink, a.skiplink:hover, a.skiplink:focus, a.skiplink:active {
+  color: white; background-color: transparent;
+}
 
 header {
   padding: 0;

@@ -1,3 +1,7 @@
 body {
   color: black;
 }
+
+a.skiplink, a.skiplink:hover, a.skiplink:focus, a.skiplink:active {
+  color: white; background-color: transparent;
+}
