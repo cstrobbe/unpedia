@@ -395,6 +395,75 @@
       <a href="https://www.youtube.com/watch?v=w_OwmqjAcn0">How to Transfer Files Using <abbr>SSH</abbr></a>
       (15 minutes, 20.09.2019). These videos cover both Linux and Windows.
     </li>
+    <li>Titus, Chris:
+      <a href="https://www.youtube.com/watch?v=7pJKBL9x6bY">How To Secure A Server</a>,
+      <i class="ytchannel">Chris Titus Tech</i>, 11.10.2019.
+      See also
+      <a href="https://www.christitus.com/secure-web-server/">How to Secure A Web Server</a>
+      (10.10.2019).
+      <br />The video shows how to secure an Ubuntu webserver.
+      <ol>
+        <li>The first step is enabling <abbr>ufw</abbr> on the server.
+          <kbd>sudo ufw limit 22/tcp</kbd> limits the number of connections from a specific <abbr>IP</abbr> address to the standard port for <abbr>SSH</abbr>.
+          <kbd>sudo ufw allow 80/tcp</kbd> makes sure that <abbr>HTTP</abbr> connections will be allowed once the firewall is enabled.
+          <kbd>sudo ufw allow 443/tcp</kbd> does the same for <abbr>HTTP</abbr> connections over <abbr>TLS</abbr>/<abbr>SSL</abbr>.
+        </li>
+        <li><kbd>sudo ufw enable</kbd> then enables the firewall.
+          <kbd>sudo ufw status</kbd> can be used to verify the settings.
+        </li>
+        <li>The next step is setting up the default policies.
+          <kbd>sudo ufw default deny incoming</kbd> denies all incoming traffic.
+          <kbd>sudo ufw default allow outgoing</kbd> allows outgoing traffic.
+          <kbd>sudo ufw reload</kbd> makes sure that these policies become effective.
+        </li>
+        <li>On the client <abbr>PC</abbr>, create an <abbr>SSH</abbr> key pair:
+          <kbd>ssh-keygen -t rsa</kbd>. (Don't skip setting a passphrase.)
+          The public key can be copied to the server using various method, <abbr>e.g.</abbr> <abbr>SCP</abbr>.
+          Chris demonstrates an easy method:
+          <kdb>ssh-copy-id -i ~/.ssh/id_rsa.pub <i>user@example.com</i> (the file location, the user name and server name or the <abbr>IP</abbr> address will vary).
+          You can then test the login, <abbr>e.g.</abbr>
+          <kbd>ssh user@example.com</kbd>.
+          (Also make a backup of your <abbr>SSH</abbr> keys.)
+        </li>
+        <li>Next, as root user, edit the file <code>/etc/sshd_config</code>:
+          <kbd>sudo su</kbd>, then <kbd>nano /etc/sshd_config</kbd>
+          and ensure that the following settings are enabled:
+          <br /><code>ChallengeResponseAuthentication no</code>
+          <br /><code>PasswordAuthentication no</code>
+          <br /><code>UsePAM no</code>
+          <br /><code>PermitRootLogin no</code> (to disable logging in as root).
+          <br />After this, restart the <abbr>SSH</abbr> daemon: <kdbd>systemctl restart sshd</kdbd>.
+          Then exit the server and reconnect using the same log in as above to check that the settings have taken effect and are set correctly.
+          Also use a different <abbr>PC</abbr> without the private <abbr>SSH</abbr> key to check that log-in attempts without a key are denied.
+        </li>
+        <li>Log back in to the server, go to <code>~/.ssh</code> and check the list of authorised keys.
+          Chris then demonstrates how to add a public <abbr>SSH</abbr> key generated on a different <abbr>PC</abbr>.
+        </li>
+        <li>On the server, open the file <code>/etc/sysctl.conf</code>:
+          <kbd>sudo nano /etc/sysctl.conf</kbd>.
+          In this file, you need to uncomment lines to enable spoof protection, disable ping (the <abbr>ICMP</abbr> protocol)
+          and reject <abbr>IP</abbr> source route packets. Then either reboot the server or run
+          <kbd>sysctl -p</kbd> to load these settings into the kernel.
+        </li>
+        <li>The next step is preventing <abbr>IP</abbr> spoofing.
+          Run <kbd>sudo nano /etc/host.conf</kbd>; change the line
+          <code>order hosts, binds</code> to <code>order binds, hosts</code>
+          and change the line
+          <code>multi on</code> to <code>nospoof on</code>.
+        </li>
+        <li>The next step is installing and settin up fail2ban:
+          <kbd>sudo apt install fail2ban</kbd>
+          <kbd>sudo systemctl enable fail2ban</kbd> and
+          <kbd>sudo systemctl start fail2ban</kbd>.
+          Finally, check that everything is running as expected:
+          <kbd>sudo systemctl status fail2ban</kbd>.
+        </li>
+        <li>Finally, <kbd>sudo netstat -tunlp</kbd> tells you what services the server exposes to the world.
+        </li>
+      </ol>
+      This covers the basics of a security setup. In addition, it is necessary to set up monitoring (especially on a bigger server or if you are running a <abbr>CMS</abbr>)
+      <!--Does not mention turning off TCP SACK using 'echo 0 > /proc/sys/net/ipv4/tcp_sack'. See https://www.theregister.co.uk/2019/06/17/linux_tcp_sack_kernel_crash/ & https://lists.debian.org/debian-user/2003/05/msg01983.html -->.
+    </li>
   </ul>
 
   <h2 id="scripting">Scripting and Automation</h2>
