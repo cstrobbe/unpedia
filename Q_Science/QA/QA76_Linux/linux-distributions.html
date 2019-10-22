@@ -12,11 +12,11 @@
   -->
   <style type="text/css">
     section.distro { margin-top: 14px; margin-bottom: 22px; padding: 0px 5px 0px 5px; border-radius: 3px; }
-    p.a11y-info { padding: 8px; border-radius: 2px; }
+    p.a11y-info, .a11y-info-intro { padding: 8px; border-radius: 2px; }
     section.distro.discontinued { border: 4px solid #DDD; }
 
-    section.a11y-info-yes { border: 5px solid #00cc00; }
-    section.a11y-info-yes p.a11y-info { color: inherit; background-color: #e6ffe6; }
+    section.a11y-info-yes, .a11y-info-intro { border: 5px solid #00cc00; }
+    section.a11y-info-yes p.a11y-info, .a11y-info-intro { color: inherit; background-color: #e6ffe6; }
 
     section.a11y-info-some { border: 5px dashed #ff9933; } /*#ffff66*/
     section.a11y-info-some p.a11y-info { color: inherit; background-color: #ffd9b3; }
@@ -77,9 +77,9 @@
     <a href="https://en.wikipedia.org/wiki/Linux_range_of_use">Linux range of use</a>.
   </p>
 
-  <h2 id="specificdistros">Specific Distributions</h2>
+  <h2 id="specificdistros">Individual Distributions</h2>
   <p>Linux distributions are listed on alphabetical order.</p>
-  <p>If a distribution provides documentation on <strong>accessibility and assistive technologies</strong>,
+  <p class="a11y-info-intro">If a distribution provides documentation on <strong>accessibility and assistive technologies</strong>,
     or has an accessibility team or contributors focusing on these topics, this is also mentioned.
     In the case of commercial distributions, this may include mentioning whether there is a
     <a href="https://en.wikipedia.org/wiki/Voluntary_Product_Accessibility_Template">Voluntary Product Accessibility Template or <abbr>VPAT</abbr></a>
