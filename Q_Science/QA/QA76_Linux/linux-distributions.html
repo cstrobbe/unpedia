@@ -14,6 +14,7 @@
     section.distro { margin-top: 14px; margin-bottom: 22px; padding: 0px 5px 0px 5px; border-radius: 3px; }
     p.a11y-info, .a11y-info-intro { padding: 8px; border-radius: 2px; }
     section.distro.discontinued { border: 4px solid #DDD; }
+    /* other classes: server-distro, nas-distro */
 
     section.a11y-info-yes, .a11y-info-intro { border: 5px solid #00cc00; }
     section.a11y-info-yes p.a11y-info, .a11y-info-intro { color: inherit; background-color: #e6ffe6; }
@@ -728,6 +729,10 @@
     <p class="a11y-info"><abbr>DF</abbr>Linux does not provide any information related to accessibility or assistive technology.
     </p>
   </section>
+  <!--@@Debian Facile: https://debian-facile.org/index-df.php
+    The latest version, based on Debian 10.1, was released in September 2019.
+    Not the same project; see https://debian-facile.org/doc:install:install?s[]=frama#dflinux
+  -->
 
   <section class="distro a11y-info-none">
     <h3 id="dragora">Dragora</h3>
@@ -1892,7 +1897,7 @@
     </p>
   </section>
 
-  <section class="distro a11y-info-none">
+  <section class="distro server-distro a11y-info-none">
     <h3 id="omarine">Omarine</h3>
     <p><a href="https://omarine.org/">Omarine</a>
       <q>is a powerful operating system for servers. It can also be used for desktops with the GNOME/Plasma/Xfce/LXDE option right at the login screen without any additional configuration.</q>
