@@ -2337,6 +2337,10 @@
       <a href="https://opensource.com/article/19/10/strace">Understanding system calls on Linux with strace</a>,
       <i class="website">Opensource.com</i>, 25.10.2019.
     </li>
+    <li>Guo, Philip J.:
+      <a href="http://pgbovine.net/command-line-bullshittery.htm">Helping my students overcome command-line bullshittery</a>,
+      <i class="website">Philip J. Guo</i>, October 2014.
+    </li>
   </ul>
 
 <!--
@@ -2403,5 +2407,59 @@ Courses, seminars, training:
   <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
   </p>
 </footer>
+<script>
+  'use strict';
+  var DEBUG = true;
+  var all_headings = Array.from(document.querySelectorAll("h2,h3,h4,h5,h6")); /* https://stackoverflow.com/questions/7065562/how-do-i-get-all-h1-h2-h3-etc-elements-in-javascript */
+  if (DEBUG) console.log(all_headings);
+
+  function createHeadingsUlList(headingsArray, currentLevel) {
+    var ulList = document.createElement("ul");
+    ulList.setAttribute("class", "pagenavigation");
+    for (var index = 0; index < headingsArray.length; index++) {
+      var liNode = document.createElement("li");
+      if (headingsArray[index].localName.localeCompare(currentLevel) > 0) { // if localName is sorted after currentLevel, localCompare returns 1
+        liNode.appendChild(createHeadingsUlList(headingsArray.slice(headingsArray[index + 1]), headingsArray[index].localName));
+        if (DEBUG) console.log("recursive call for sublist: " + "Heading: " + all_headings[index].localName + ": " + all_headings[index].innerText + " _ ID:" + all_headings[index].id);
+      } else {
+        var linkNode = document.createElement("a");
+        var txtNode = document.createTextNode(headingsArray[index].localName + ": " + headingsArray[index].innerText);
+        linkNode.setAttribute("href", "#" + headingsArray[index].id);
+        linkNode.appendChild(txtNode);
+        liNode.appendChild(linkNode);
+        ulList.appendChild(liNode);
+        //@@todo continue
+      }
+    }
+    return ulList;
+  }
+
+  // Create ul list of headings below h1:
+  //document.getElementsByTagName("header")[0].insertAdjacentElement('afterend', createHeadingsUlList(all_headings, "h2"));
+
+  for (var index = 0; index < all_headings.length; index++) {
+    //if (DEBUG) console.log("Heading: " + all_headings[index].localName + ": " + all_headings[index].innerText + " _ ID:" + all_headings[index].id );
+  }
+  //var all_h2_headings = document.getElementsByTagName("h2");
+  //console.log(all_h2_headings);
+</script>
+<!--Using JavaScript to generate a table of contents:
+ * Generating A Table Of Contents with Pure JavaScript – TOC. 12.07.2018: https://www.cssscript.com/generating-a-table-of-contents-with-pure-javascript-toc/
+   "TOC is a jQuery-free JavaScript plugin that automatically generates a table of contents from HTML heading tags of your long content." MIT licence.
+   Code on GitHub: https://github.com/idiotWu/jQuery-TOC
+ * Generate A Hierarchical Table Of Contents With Vanilla JS – toc-plugin. 05.09.2018: https://www.cssscript.com/hierarchical-table-of-contents/
+   "A vanilla JavaScript TOC plugin used to generate a list based hierarchical table of contents for long web content."
+   Licence: MIT? GitHub: https://github.com/tyler-vs/toc-plugin
+ * Frédéric Perrin: Creating a Table of Contents in JavaScript, 24.11.2016: https://www.blustemy.io/creating-a-table-of-contents-in-javascript/
+   See demo on CodePen: https://codepen.io/blustemy/pen/GNNZwp/
+
+ * Chris Coyier: Automatic Table of Contents. CSS-Tricks, 20.03.2013: https://css-tricks.com/automatic-table-of-contents/
+   This relies on jQuery. Nested list?
+ * Packt: Using jQuery Script for Creating Dynamic Table of Contents, 21.10.2009: https://hub.packtpub.com/using-jquery-script-creating-dynamic-table-contents/
+ * Create Table Of Contents (TOC) With Multi-level List In JavaScript, February 2017: https://www.mybloggertricks.com/2017/02/create-table-of-contents-javascript.html 
+   Only for Blogger users.
+ * ppk: Table of Contents script. (no date; probably old; only h3 and h4): https://quirksmode.org/dom/toc.html
+ * Stuart Langridge: generated-toc: Generate a Table of Contents with the DOM. July 2007, February 2008: https://kryogenix.org/code/browser/generated-toc/
+-->
 </body>
 </html>
