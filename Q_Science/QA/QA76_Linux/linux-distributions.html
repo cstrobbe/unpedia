@@ -2079,8 +2079,20 @@
       and
       <a href="https://build.opensuse.org/">openSUSE Build Service</a>
       (a public instance of <a href="https://openbuildservice.org/">Open Build Service</a>).
+    </p>
       <!--Egee: "5 Reasons Why I Use openSUSE Leap 15 Linux 2018" (10 minutes, 03.08.2018): https://www.youtube.com/watch?v=9oonm2GCCMo -->
       <!--Jan Kupec: Zypper - presentation at FOSDEM 2009 (27 minutes): https://www.youtube.com/watch?v=GUK6M7LwyWg -->
+    <p>The wiki page
+      <a href="https://en.opensuse.org/openSUSE:Statistics">openSUSE:Statistics</a>
+      contains the following information related to privacy (accessed 10.11.2019):
+      <blockquote>
+        <p>Counting <abbr>IP</abbr> addresses has the disadvantage that many machines are hidden behind proxy servers or masquerading routers.
+          In order to get a more accurate view on the number of installations the openSUSE project instead counts unique Zypper <abbr>UUID</abbr> signatures hitting download.opensuse.org.
+          This <abbr>UUID</abbr> string is a random label that is created during an installation. The openSUSE project does not use this id to track anything but to count.
+        There is no way to relate this random string to a user or machine.</p>
+        <p>The <abbr>UUID</abbr> is stored in the file /var/lib/zypp/AnonymousUniqueId. In order to not have an installation counted for the statistics the file can be removed or emptied.
+        Alternatively online repositories can be switched to use a specific mirror server instead of the automatic redirector on download.opensuse.org.</p>
+      </blockquote>
     </p>
     <p class="a11y-info">openSUSE is one of the few Linux distributions that provide documentation on assistive technologies.
       See
