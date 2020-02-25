@@ -252,6 +252,11 @@ li.women-work, dt.women-work, label.women-work { background-color: BlanchedAlmon
 dt.women-work, dd.women-work { border-bottom: 1px solid #ff00ff; }
 dd.women-work { border-left: 1px solid #ff00ff; }
 
+dl.q-a-list dt { font-weight: normal;
+  background-color: #b0c1d6; color: inherit; /*color from https://www.color-hex.com/color/7e9abc */
+  border-left: 1px solid #51739C;
+}
+
 form p { margin-top: 0em; margin-bottom: 0em;}
 form p label { padding-right: 4px; padding-left: 4px;}
 
