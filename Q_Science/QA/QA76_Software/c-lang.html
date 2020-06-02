@@ -9,6 +9,7 @@
   <link rel="alternate stylesheet" type="text/css" media="screen" href="../../../css/systemcolours.css" title="System colours" />
   <link rel="alternate stylesheet" type="text/css" media="screen" href="../../../css/default.css" title="No colours" />
   -->
+  <link rel="top" href="../../../index.html" title="Unpedia home page" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="googlebot" content="noindex, nofollow" />
 </head>
@@ -36,6 +37,23 @@
       <!--Outdated URL: http://cm.bell-labs.com/cm/cs/who/dmr/chist.html -->
       (Also available in <a href="https://www.bell-labs.com/usr/dmr/www/chist.pdf"><abbr>PDF</abbr> format</a>.)
       <!--ACM HOPL-II, 1993: https://dl.acm.org/citation.cfm?doid=155360.155580 -->
+    </li>
+    <li>
+      <a href="https://softwareengineering.stackexchange.com/q/103897/247375">Is the C programming language still used?</a>
+      This question was posted on Software Engineering Stack Exchange in 2011. 
+      <a href="https://softwareengineering.stackexchange.com/a/103898/247375">One of the answers</a>
+      links to an e-mail from 2007 in which Linus Torvalds responds to the question why the Linux kernel is written in C instead of C++:
+      <q>C++ is a horrible language. It's made more horrible by the fact that a lot 
+      of substandard programmers use it, to the point where it's much much 
+      easier to generate total and utter crap with it. Quite frankly, even if 
+      the choice of C were to do *nothing* but keep the C++ programmers out, 
+      that in itself would be a huge reason to use C.</q>
+      (Of course, <a href="http://warp.povusers.org/OpenLetters/ResponseToTorvalds.html" title="A response to Linus Torvalds on C++">some people disagreed with Linus Torvalds</a>.)
+    </li>
+    <li>
+      <a href="https://stackoverflow.com/q/81656/6002174">Where do I find the current C or C++ standard documents?</a>
+      This question was posted on Stack Overflow in September 2008 but has answers that have been updated
+      to keep references up to date.
     </li>
     <!--
     <li>
@@ -160,8 +178,14 @@
       <a href="https://ericlippert.com/2014/05/12/what-are-the-fundamental-rules-of-pointers/">What are the fundamental rules of pointers?</a>,
       <i class="blog">Fabulous adventures in coding</i>, 12.05.2014.
     </li>
+    <li><span lang="de">Wolf, Jürgen:
+      <i class="booktitle">C von A bis Z. Das umfassende Handbuch</i>. 3., aktualisierte und erweiterte Auflage. Rheinwerk Computing</span>.
+      <a href="http://openbook.rheinwerk-verlag.de/c_von_a_bis_z/"><abbr>ISBN</abbr> 978-3-8362-1411-7</a>.
+      Available online as &ldquo;open book&rdquo;.
+    </li>
     <!--
       * Chuck Allison: Thinking in C: Foundations for Java and C++. MindView, 1999. CD Rom Table of contents: http://www.mindview.net/CDs/ThinkingInC-CD/Home.html/ 
+      * Chuck Allison and Bruce Eckel: Thinking In C [Creative Commons  Attribution-Noncommercial-No Derivative Works 3.0]: https://archive.org/details/ThinkingInC
 
       Bluefever Software:
       * Beginning C Programming (62 videos): https://www.youtube.com/playlist?list=PLZ1QII7yudbdFfKY1eKV3x_bag04AMPJq 
@@ -229,6 +253,11 @@
       <a href="http://www.pgbovine.net/c-programming-tips.htm">C Programming Tips</a>.
       <i class="blog">Philip J. Guo</i>, November 2005.
       The author is assistant professor on cognitive science at the University of California at San Diego.
+    </li>
+    <li>O'Riordan, Ciaran:
+      <a href="http://www.nongnu.org/c-prog-book/">Learning <abbr>GNU</abbr> C</a>.
+      (Not updated since 2003.)
+      <!--See also http://refcnt.org/~sts/docs/c/learning_gnu_c.html -->
     </li>
   </ul>
 
@@ -309,6 +338,12 @@
       <a href="https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard"><abbr title="Software Engineering Institute">SEI</abbr> <abbr>CERT</abbr> C Coding Standard</a>,
       <i class="website">Software Engineering Institute, Carnegie Mellon University</i>.
     </li>
+    <li>Cook, Kees:
+      <a href="https://www.youtube.com/watch?v=XfNt6MsLj0E">Making C Less Dangerous</a>
+      (YouTube, 34 minutes, 01.09.2018): presentation at the Linux Security Summit, Vancouver, Canada
+      on 27.08.2018. The
+      <a href="https://outflux.net/slides/2018/lss/danger.pdf">slides</a> are available for download.
+    </li>
     <li>
       <a href="https://stackoverflow.com/q/2840940/6002174">Is it secure to use malloc?</a>:
       a question on Stack Overflow (posted in 2010).
@@ -320,7 +355,7 @@
     <li>
       <a href="https://trust-in-soft.com/tis-interpreter/">tis-interpreter</a>
       is a tool that
-      <q> detects subtle bugs in C programs that may not have eye-visible effects when executing the same programs compiled in the traditional way</q>.
+      <q>detects subtle bugs in C programs that may not have eye-visible effects when executing the same programs compiled in the traditional way</q>.
       The 
       <a href="https://github.com/TrustInSoft/tis-interpreter">tis-interpreter source code</a>
       is available on GitHub. The repository contains
@@ -359,6 +394,45 @@
     </li>
   </ul>
 
+  <h2>C Compilers</h2>
+  <p>
+  </p>
+  <ul>
+    <li>
+      <a href="http://sdcc.sourceforge.net/"><abbr>SDCC</abbr> - Small Device C Compiler</a>:
+      an open-source compiler that targets specific processors.
+    </li>
+    <li>
+      <a href="https://github.com/rui314/8cc">8cc</a>:
+      a small open-source C compiler that supports all features of C11. 
+    </li>
+    <li>
+      <a href="http://nwcc.sourceforge.net/"><abbr>nwcc</abbr>: Nils Weller's C compiler</a>:
+      an open-source C compiler for Unix and similar systems.
+    </li>
+    <li>
+      <a href=""></a>
+    </li>
+    <li>
+      <a href="https://bellard.org/tcc/"><abbr>TCC</abbr>: Tiny C Compiler</a>:
+      one of the smallest C compilers. Unfortunately, it is no longer being maintained.
+    </li>
+    <li>
+      <a href="https://bellard.org/otcc/">Obfuscated Tiny C Compiler (<abbr>OTCC</abbr>)</a>:
+      written in 2002.
+    </li>
+    <li>
+      <a href="https://www.quora.com/What-is-the-smallest-but-still-with-readable-sources-C-compiler-you-know-preferably-for-x86">What is the smallest (but still with readable sources) C compiler you know, preferably for x86?</a>
+      This question was posted on Quora in 2016.
+      <a href="http://starynkevitch.net/Basile/">Basile Starynkevitch</a>
+      points out that
+      <q>real C compilers do a <i>lot</i> of optimizations (so writing a compiler as efficient as GCC or Clang would take you more than a lifetime) an
+      you need them if performance matters to you (because current hardware is not simple, and not as naively close to the C language as you might believe;
+      register allocation, instruction scheduling, cache management matters a lot for performance).
+      Using a simple compiler like tcc or nwcc or 8cc without real optimizations will decrease performance by a factor of at least three!</q>
+    </li>
+  </ul>
+
   <h2>C Libraries and Tools</h2>
   <ul>
     <li>Wikipedia:
@@ -394,12 +468,31 @@
       <q>a portable, license-free, lock-free data structure library written in C</q>.
     </li>
     <li>
+      <a href="http://xmlsoft.org/index.html">libxml</a>:
+      libxml2 is <q>the <abbr>XML</abbr> C parser and toolkit developed for the Gnome project</q>.
+    </li>
+    <li>
+      <a href="http://xmlsoft.org/XSLT/">libxslt</a>:
+      <q>C library developed for the GNOME project</q>.
+    </li>
+    <li>
       <a href="http://www.sqlite.org/">SQLite</a>:
       open source <abbr>SQL</abbr> database engine written in <abbr>ANSI</abbr> C.
     </li>
     <li>Brewer, John:
       <a href="http://www.jera.com/techinfo/jtns/jtn002.html"><abbr title="Jera Tech Notes">JTN</abbr>002 - MinUnit -- a minimal unit testing framework for C</a>
       (no date).
+    </li>
+    <li>
+      <a href="https://stedolan.github.io/jq/">jq</a>:
+      <q>jq is a lightweight and flexible command-line <abbr>JSON</abbr> processor.</q>
+      <a href="https://github.com/stedolan/jq">jq's source code</a>
+      is available on GitHub under the terms of the
+      <a href="https://github.com/stedolan/jq/blob/master/COPYING"><abbr>MIT</abbr> licence</a>.
+    </li>
+    <li>
+      <a href="https://github.com/bstarynk/bismon">bismon</a>:
+      an open-source persistent monitor.
     </li>
     <!--
     <li>
@@ -445,6 +538,19 @@
       <br />Among other things, Raymond mentions what he calls &ldquo;the harsh lesson of Perl&dquo;:
       <q>any new language that ships without a full <abbr title="Portable Operating System Interface">POSIX</abbr> binding semantically equivalent to C’s <i>will fail</i>..
       <abbr>CS</abbr> history is littered with the corpses of academic languages whose authors did not grasp this necessity.</q>
+    </li>
+    <li>Levien, Raph:
+      <a href="https://raphlinus.github.io/programming/rust/2018/08/17/undefined-behavior.html">With Undefined Behavior, Anything is Possible</a>,
+      <i class="website">Raph Levien’s blog</i>, 17.08.2018.
+    </li>
+    <li>Chisnall, David:
+      <a href="https://queue.acm.org/detail.cfm?id=3212479">C Is Not a Low-level Language</a>,
+      <i class="magazine"><abbr>ACM</abbr> Queue</i>, Volume 16, issue 2 (30.04.2018).
+      <!--@@PDF-->
+    </li>
+    <li>
+      <a href="https://retrocomputing.stackexchange.com/q/7197">How was C ported to architectures that had no hardware stack?</a>
+      A question on Retrocomputing Stack Exchange.
     </li>
     <li>
       <a href="http://www.underhanded-c.org/">The Underhanded C Contest</a>: 
