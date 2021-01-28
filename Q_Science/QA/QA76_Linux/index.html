@@ -788,6 +788,20 @@
       <a href="https://kalilinuxtutorials.com/tuxresponse-linux-incident-response/">TuxResponse : Linux Incident Response 2020</a>,
       <i class="website">Kalilinuxtutorials</i>, 13.01.2020.
     </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=eamEZCj-CuQ">Sudo is a Bloated Insecure Mess (install doas)</a>
+        (<i class="ytchannel">Mental Outlaw</i> on YouTube, 10 minutes, 28.01.2021).
+        <br />This video points out that <a href="https://github.com/sudo-project/sudo">sudo</a>
+        has more than 400,000 lines of code and is very bloated for what desktop users need from it (as opposed to big corporate servers),
+        <abbr>i.e.</abbr> run commands as the root user.
+        Due to the size of its code base, the risks for vulnerabilties is higher, such as the
+        <a href="https://www.qualys.com/2021/01/26/cve-2021-3156/baron-samedit-heap-based-overflow-sudo.txt">Heap-based buffer overflow in Sudo (<abbr>CVE</abbr>-2021-3156)</a>
+        reported by Qualys.
+        <br />The video proposes that users install
+        <a href="https://github.com/slicer69/doas">doas</a> as an alternative.
+        Its code base is less than 4,000 lines of code, so it's easier to maintain; <abbr>BSD</abbr> operating systems have been using this for quite some time.
+        Most distributions need to install it from GitHub.
+      </li>
     <li>
       <a href="https://www.youtube.com/watch?v=ZsjK4VDopiE">Before I do anything on Linux, I do this first...</a>
       (<i class="ytchannel">Techno Tim</i> on YouTube, 19 minutes, 31.10.2020).
