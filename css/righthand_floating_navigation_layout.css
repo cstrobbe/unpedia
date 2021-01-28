@@ -146,3 +146,5 @@ a.isbn[temp-href="404.html"], a.isbn[temp-href="404.html"]:hover, a.isbn[temp-hr
   color: black; background-color: inherit;
 }
 
+.portrait-container { float: right;  margin-left: 20px; margin-bottom: 20px; }
+
