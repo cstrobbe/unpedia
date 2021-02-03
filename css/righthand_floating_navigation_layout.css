@@ -122,7 +122,7 @@ rp, rt {
   display: none;
 }
 
-i.booktitle, i.journal, i.proceedings, i.conference, i.editedvolume, i.phdthesis, i.magazine, i.newspaper, i.website, i.blog, i.ytchannel, i.play {
+i.booktitle, i.journal, i.proceedings, i.conference, i.editedvolume, i.phdthesis, i.magazine, i.newspaper, i.website, i.blog, i.ytchannel, i.play, i.wiki {
   font-style: italic;
 }
 
@@ -146,5 +146,6 @@ a.isbn[temp-href="404.html"], a.isbn[temp-href="404.html"]:hover, a.isbn[temp-hr
   color: black; background-color: inherit;
 }
 
-.portrait-container { float: right;  margin-left: 20px; margin-bottom: 20px; }
+.portrait-container { float: right;  margin-left: 20px; margin-bottom: 20px; border: 0; }
+.portrait-container img:hover { transform: scale(1.1); transition: all 0.3s; }
 
