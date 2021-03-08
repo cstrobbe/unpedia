@@ -12,6 +12,18 @@ permalink: /404.html
   <meta name="robots" content="noindex, nofollow" />
   <meta name="googlebot" content="noindex, nofollow" />
   <base id="base-url" href="http://cstrobbe.github.io/unpedia/" />
+  <style type="text/css">
+    .invisible { display: none; }
+    body.bsod { background-color: #2066ad; color: white; margin-top: 100px; margin-left: 100px;}
+    body.bsod #windows-error div#windows-error { display: block; }
+    body.bsod #default-error, body.bsod header, body.bsod footer { display: none; }
+    body.bsod #windows-error .smiley { font-size: 5em; color: white; background-color: transparent; }
+    body.bsod #windows-error p.message { font-size: 2em; }
+    body.bsod #windows-error p.message em { text-transform: uppercase; font-style: normal; }
+    body.bsod a { color: white; }
+  </style>
+  <!--"Funny 404 Pages – Examples and How to Create Your Own" (17.11.2016): https://ithemes.com/funny-404-pages/ -->
+
   <script language="javascript">
     let baseElem = document.getElementById("base-url");
     let currentUrl = document.URL;
@@ -27,17 +39,24 @@ permalink: /404.html
   </header>
 
   <main id="main">
-    <p>Sorry,
-      <br />The page you are looking for cannot be found.
-    </p>
-    <ol>
-      <li>The page you are looking for is not here or has been deleted.</li>
-      <li>If you followed a link from another page on the same site, please
-        <a href="https://github.com/cstrobbe/unpedia/issues">report the broken link on GitHub</a>.
-      </li>
-      <li>Please check whether the <abbr>URL</abbr> you entered is correct.</li>
-    </ol>
+    <div id="default-error">
+      <p>Sorry,
+        <br />The page you are looking for cannot be found.
+      </p>
+      <ol>
+        <li>The page you are looking for is not here or has been deleted.</li>
+        <li>If you followed a link from another page on the same site, please
+          <a href="https://github.com/cstrobbe/unpedia/issues">report the broken link on GitHub</a>.
+        </li>
+        <li>Please check whether the <abbr>URL</abbr> you entered is correct.</li>
+      </ol>
+    </div>
 
+    <div id="windows-error" class="invisible">
+      <h2 class="smiley" aria-label="looking down">( ._. )</h2>
+      <p class="message">I don't know <em>what</em><br />the fuck is going on.</p>
+      <p>Back to the <a href="https://cstrobbe.github.io/unpedia/">home page</a> &hellip;</p>
+    </div>
   </main>
 
   <!--
@@ -78,5 +97,15 @@ permalink: /404.html
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
     </p>
   </footer>
+
+  <script language="javascript">
+    let os = "Unknown";
+    // https://daily-dev-tips.com/posts/vanilla-javascript-detecting-the-operating-system/
+    if (navigator.appVersion.indexOf("Win") != -1) {
+      os = "Windows";
+      document.getElementById("error404").className = "bsod";
+      document.getElementById("windows-error").removeAttribute("class");
+    }
+  </script>
 </body>
 </html>
