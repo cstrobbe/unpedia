@@ -31,10 +31,17 @@ header {
   background: #5583B5 50% 0 url('./StuttgartBib.jpg') repeat-x; /* old IE fallback */
   background-position: left;
   text-align: left;
-  /* @@TODO create higher header background image 
+  /* @@TODO create higher header background image
     + height & width of the image:
     + height: @@@px; width: 1521px; max-width: 75%
   */
+}
+
+#shakespeare header, #english-renaissance header {
+  padding: 0;
+  background: transparent 50% 0 url('./globe-london-roof-sky-cc-by-20_1520.jpg') no-repeat; /* repeat-x: old IE fallback */
+  background-position: left;
+  text-align: left;
 }
 
 h1 {
