@@ -150,7 +150,7 @@ a:link, a:visited {
 }
 
 blockquote {
-  background-color: #98A8BF;/*@@find a lighter colour*/
+  background-color: #F0F8FF;/*original colour: #98A8BF*/
   color: black;
   padding: 4px 12px;
   border: 2px solid #5583B5;
@@ -306,6 +306,8 @@ q[cite^="https://twitter.com/"] { display: block; quotes: none;
 */
 
 ul.manualnumbers { list-style-type: none; }
+
+.bate-rec-2016 { background-color: #FFFACD; color: inherit; } /*Shakespeare page*/
 
 /* Other Chinese fonts: "FangSong", "仿宋"; see http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/ & http://webdesign.tutsplus.com/articles/the-complete-beginners-guide-to-chinese-fonts--cms-23444 */
 *[lang=zh-CN], rb[lang=zh-CN], span[lang=zh-CN], i[lang=zh-CN] {
