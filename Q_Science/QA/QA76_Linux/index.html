@@ -306,7 +306,7 @@
     <li>Juarez, Alex:
       <a href="https://opensource.com/article/19/8/linux-permissions-101?utm_campaign=intrel">Linux permissions 101</a>,
       <i class="website">Opensource.com</i>, 01.08.2019.
-      <br />This covers the commands <kbd>chown</kbd>, <kbd>suid</kbd> and <kdb>umask</kdb>.
+      <br />This covers the commands <kbd>chown</kbd>, <kbd>suid</kbd> and <kbd>umask</kbd>.
     </li>
     <li>Formy-Duval, Alan:
       <a href="https://opensource.com/article/19/9/linux-chgrp-and-newgrp-commands">Introduction to the Linux chgrp and newgrp commands</a>,
@@ -515,7 +515,7 @@
           <kbd>ssh-keygen -t rsa</kbd>. (Don't skip setting a passphrase.)
           The public key can be copied to the server using various method, <abbr>e.g.</abbr> <abbr>SCP</abbr>.
           Chris demonstrates an easy method:
-          <kdb>ssh-copy-id -i ~/.ssh/id_rsa.pub <i>user@example.com</i> (the file location, the user name and server name or the <abbr>IP</abbr> address will vary).
+          <kbd>ssh-copy-id -i ~/.ssh/id_rsa.pub <i>user@example.com</i></kbd> (the file location, the user name and server name or the <abbr>IP</abbr> address will vary).
           You can then test the login, <abbr>e.g.</abbr>
           <kbd>ssh user@example.com</kbd>.
           (Also make a backup of your <abbr>SSH</abbr> keys.)
@@ -527,7 +527,7 @@
           <br /><code>PasswordAuthentication no</code>
           <br /><code>UsePAM no</code>
           <br /><code>PermitRootLogin no</code> (to disable logging in as root).
-          <br />After this, restart the <abbr>SSH</abbr> daemon: <kdbd>systemctl restart sshd</kdbd>.
+          <br />After this, restart the <abbr>SSH</abbr> daemon: <kbd>systemctl restart sshd</kbd>.
           Then exit the server and reconnect using the same log in as above to check that the settings have taken effect and are set correctly.
           Also use a different <abbr>PC</abbr> without the private <abbr>SSH</abbr> key to check that log-in attempts without a key are denied.
         </li>
@@ -2420,7 +2420,7 @@
       Michael / @mflux: 03.09.2016: https://twitter.com/mflux/status/772180728347959296
       Adam Morgan: "In Defense of Douglas Crockford", 03.09.2016: https://atom-morgan.github.io/in-defense-of-douglas-crockford/
       In defence of Douglas Crockford: https://news.ycombinator.com/item?id=12422420
-    ->
+    -->
     <!--@@move to Unix page-->
     <li>Garfinkel, Simson; Weise, Daniel; Strassmann, Steven (editors):
       <i class="booktitle">The Unix-Haters Handbook</i>. <abbr>IDG</abbr> Books, 1994. (329 pages)
@@ -2726,7 +2726,7 @@
       <a href="https://opensource.com/article/19/9/linux-commands-hardware-information">Linux commands to display your hardware information</a>,
       <i class="website">Opensource.com</i>, 16.09.2019.
       <br />Discusses the commands <kbd>inxi</kbd>, <kbd>hwinfo</kbd>, <kbd>lshw</kbd>,
-      <kbd>lscpu</kbd>, <kdb>dmidecode</kdb>, <kbd>lspci</kbd>, <kbd>free</kbd>, <kbd>hdparm</kbd>,
+      <kbd>lscpu</kbd>, <kbd>dmidecode</kbd>, <kbd>lspci</kbd>, <kbd>free</kbd>, <kbd>hdparm</kbd>,
       <kbd>lsblk</kbd>, <kbd>fdisk</kbd>, <kbd>blkid</kbd>, <kbd>df</kbd>, <kbd>lsusb</kbd>, <kbd>lspci</kbd>,
       <kbd>ifconfig</kbd>, <kbd>ip</kbd>, <kbd>netstat</kbd>, <kbd>dmidecode</kbd> and <kbd>uname</kbd>.
     </li>
