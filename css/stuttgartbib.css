@@ -37,6 +37,34 @@ header {
   */
 }
 
+#home {
+  background: url('./library_books_706593_public-domain_1200x800.jpeg');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-attachment: fixed;
+  background-size: cover;
+  /*background-size: 1200px 800px;*/
+}
+
+#home > * {
+  max-width: 1200px;
+  margin-left: auto; margin-right: auto; /*center block-level elements*/
+  background:#dfdfdf;
+  background:rgba(223,223,223,0.9);
+}
+
+#home header {
+  color: white;
+  background-image: none;
+  background:#7f7f7f;
+  background:rgba(55,55,55,0.5);
+}
+
+#home header span {
+  background-color: transparent;
+  font-size: 3.5rem;
+}
+
 #shakespeare header, #english-renaissance header {
   padding: 0;
   background: transparent 50% 0 url('./globe-london-roof-sky-cc-by-20_1520.jpg') no-repeat; /* repeat-x: old IE fallback */
@@ -120,6 +148,11 @@ nav a:active {
   border-right: 10px solid red;
   border-bottom: /*none;*/ 1px solid red;
   border-left: 10px solid red;
+}
+
+main {
+  padding-bottom: 1rem;
+  padding-left: 15px;
 }
 
 a:link, a:visited {
