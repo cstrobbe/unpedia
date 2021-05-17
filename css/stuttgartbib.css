@@ -199,6 +199,8 @@ blockquote cite:before {
   content: "\2014 \2009";
 }
 
+q.noquotes:before, q.noquotes:after { content: none; }
+
 li blockquote { margin: 4px 0;}
 li blockquote p { margin: 0; padding: 0;}
 
