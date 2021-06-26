@@ -340,6 +340,32 @@
       <a href="https://fedoramagazine.org/systemd-unit-dependencies-and-order/">systemd: Unit dependencies and order</a>,
       <i class="magazine">Fedora Magazine</i>, 25.11.2015.
     </li>
+    <li>Congleton, Nick:
+      <a href="https://linuxconfig.org/how-to-write-a-simple-systemd-service">How To Write A Simple Systemd Service</a>,
+      <i class="website">LinuxConfig.org</i>, 24.10.2020.
+      <br />This is a basic introduction. For example, it does not mention that you can validate a service file using the command
+      <kbd>sudo systemd-analyze verify foobar.service</kbd> (in which <var>foobar.service</var> needs to be replaced with the actual service name).
+    </li>
+  </ul>
+  <p>Running Java code as a systemd service:</p>
+  <ul>
+    <li>Sarwar, Muhammad:
+      <a href="https://dzone.com/articles/run-your-java-application-as-a-service-on-ubuntu">Run Your Java App as a Service on Ubuntu</a>,
+      <i class="website">DZone Java</i>, 20.10.2017 (accessed on 25.06.2021).
+      <br />This solution works. For running the <a href="https://validator.github.io/validator/#standalone">Nu <abbr>Html</abbr> Checker</a>
+      on address <code>127.0.0.1</code> on port <code>8888</code>, the shell script should read
+      <br /><code>#!/bin/sh<br />
+      java -cp ~/vnu.jar -Dnu.validator.servlet.bind-address=127.0.0.1 nu.validator.servlet.Main 8888</code>
+    </li>
+    <li>Dhamnaskar, Ameya:
+      <a href="https://medium.com/@ameyadhamnaskar/running-java-application-as-a-service-on-centos-599609d0c641">Running Java application as Linux service with systemd</a>,
+      <i class="blog">Ameya Dhamnaskar</i> on Medium, 03.10.2018 (accessed on 25.06.2021).
+      <br />Note that the method described in this blogpost does not seem to work for the
+      <a href="https://validator.github.io/validator/#standalone">Nu <abbr>Html</abbr> Checker</a>,
+      which requires an invocation such as
+      <code>java -cp ~/vnu.jar -Dnu.validator.servlet.bind-address=127.0.0.1 nu.validator.servlet.Main 8888</code>
+      (even after replacing <code>nohup java -jar ...</code> from the script with the corresponding code from the Nu <abbr>Html</abbr> Checker documentation).
+    </li>
   </ul>
 
   <h3>Introductions to Various Other Aspects</h3>
